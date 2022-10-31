@@ -1,0 +1,53 @@
+.menumain{
+    text-align: center;
+    margin-bottom: 100px;
+}
+.menubody{
+    width:80%;
+    height: 2000px;
+    margin:auto;
+}
+
+.isi {
+    background-color: #4D392E;
+    margin : 30px 30px 50px;
+    text-align: center;
+}
+
+.isi td{
+    padding:5px 10px 30px;
+    width: 150px;
+    height: 120px;
+    background-color: #EEE3CB;
+    border-radius: 8px;
+ 
+}
+.menumain h1{
+    
+}
+h3{
+    font-family: sans-serif;
+    font-size: 30px;
+    background-color: none;
+}
+.isi td img{
+    margin-bottom: 20px;
+    width: 80px;
+    height: 90px;
+}
+.isi td a{
+    background-color: #967E76;
+    border: 2px solid #4D392E;
+    font-size: 12px;
+    padding: 3px;
+    border-radius: 28px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Caveat', cursive;
+}
+.btn{
+    width: 60px;
+    height: 20px;
+    margin-left: 20px;
+    margin-bottom: 4px;
+}

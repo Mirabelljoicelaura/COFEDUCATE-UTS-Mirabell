@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- This is main Form Area Start ++ -->
+    <div class="container">
+        <!-- Main form Body Start -->
+        <div class="body">
+            <!-- haed -->
+            <div class="head">
+                <h1>Get Your Table Now</h1>
+            </div>
+            <form id="myForm" onsubmit="return validateForm()" method="get"> 
+            <!-- Body -->
+            <div class="box" >
+                <div class="row">
+                    <div class="row1">
+                        <p>Name</p>
+                        <input type="text" name="name" placeholder="Customer Name"> 
+                    </div>
+                    <div class="row1">
+                        <p>Email</p>
+                        <input type="text" name="email" placeholder="Your Email"> 
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row1">
+                        <p>Date</p>
+                        <input type="date" name="date">
+                    </div>
+                    <div class="row1">
+                        <p>How many people?</p>
+                        <input type="text" name="people" placeholder="People">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row1">
+                        <p>Table Number</p>
+                        <select name="selectno" id="">
+                            <option value="1">10A</option>
+                            <option value="2">10B</option>
+                            <option value="3">20A</option>
+                            <option value="4">20B</option>
+                        </select> 
+                    </div>
+                    <div class="row1">
+                        <p>Phone</p>
+                        <input type="text" name="phone" placeholder="Phone">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row2">
+                            <p>Catatan</p>
+                            <textarea name="note" id="note" cols="10" rows="2  "></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row3">
+                        <input type="submit" value="Book Now">
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateForm(){
+            var name = document.forms["myForm"]["name"].value;
+            var email = document.forms["myForm"]["email"].value;
+            var date = document.forms["myForm"]["date"].value;
+            var people = document.forms["myForm"]["people"].value;
+            var selectno = document.forms["myForm"]["selectno"].value;
+            var phone = document.forms["myForm"]["phone"].value;
+            var note = document.forms["myForm"]["note"].value;
+            
+            if(name == "" || email=="" || date == "" || people =="" ||selectno == "" || phone =="")
+            {
+                alert("Isi datanya dulu ya! :)")
+                return false;
+            }else{
+                alert('Berhasil Pesan! :) ')
+                return true;
+            }
+
+            
+        }
+    </script>
+</body>
+
+</html>

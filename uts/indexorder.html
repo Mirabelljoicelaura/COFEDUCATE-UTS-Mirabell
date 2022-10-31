@@ -1,0 +1,120 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styleorder.css">
+</head>
+
+<body>
+    <!-- This is main Form Area Start ++ -->
+    <div class="container">
+        <!-- Main form Body Start -->
+        <div class="body">
+            <!-- haed -->
+            <div class="head">
+                <h1>Order</h1>
+            </div>
+            <form id="myForm" onsubmit="return validateForm()" method="get"> 
+            <!-- Body -->
+            <div class="box" >
+                <div class="row">
+                    <div class="row1">
+                        <p>Name</p>
+                        <input type="text" name="name" placeholder="Customer Name"> 
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row1">
+                        <p>Alamat</p>
+                        <input type="text" name="alamat" placeholder="Alamat">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row1">
+                            <p>Number</p>
+                            <input type="text" name="phone" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row1">
+                        <p>Item</p>
+                        <select name="select" id="">
+                            <option value="1">Cofeducate</option>
+                            <option value="2">Coffe Latte</option>
+                            <option value="3">Irish</option>
+                            <option value="4">Capuncino</option>
+                            <option value="5">Breve</option>
+                            <option value="6">Vanila Latte</option>
+                            <option value="7">Snowy Mocha</option>
+                            <option value="8">Mexi Mocha</option>
+                            <option value="9">Caramel Mocha</option>
+                            <option value="10">Salted Caramel</option>
+                            <option value="11">Coklat</option>
+                            <option value="12">Coklat Mac</option>
+                            <option value="13">Croissant Lotus</option>
+                            <option value="14">Croissant Keju</option>
+                            <option value="15">Croissant Cinamon</option>
+                            <option value="16">Croissant Coklat</option>
+                            <option value="17">Croissant Banana</option>
+                            <option value="17">Croissant Mocha</option>
+                        </select> 
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="row1">
+                        <p>Jumlah</p>
+                        <select name="select" id="">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select> 
+                    </div>
+                    
+                </div>
+
+                <div class="row">
+                    <div class="row3">
+                        <input type="submit" value="Order">
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateForm(){
+            var name = document.forms["myForm"]["name"].value;
+            var alamat= document.forms["myForm"]["alamat"].value;
+            var phone = document.forms["myForm"]["phone"].value;
+            var utem = document.forms["myForm"]["utem"].value;
+            var select = document.forms["myForm"]["select"].value;
+            
+            if(name == "" || alamat=="" || phone == "" ||Item == "" ||select == "" )
+            {
+                alert("Isi datanya dulu ya! :)")
+                return false;
+            }else{
+                alert('Berhasil Order! :) ')
+                return true;
+            }
+
+            
+        }
+    </script>
+</body>
+
+</html>
